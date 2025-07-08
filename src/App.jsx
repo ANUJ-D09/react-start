@@ -52,14 +52,14 @@ function PostComponent() {
       >
         <img
           src="/Snip20250707_36.png"
-          alt="Dog" // Added alt text for accessibility
+          alt="Dog" 
           style={{
             width: 40,
             height: 40,
             margin:10,
             padding:10,
-            borderRadius: "50%", // Changed to make it circular
-            objectFit: "cover", // Ensures image maintains aspect ratio
+            borderRadius: "50%", 
+            objectFit: "cover", 
           }}
         />
         <b>I am best dog</b>
