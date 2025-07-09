@@ -2,31 +2,33 @@ import { useState } from "react";
 
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: "grey",
-        height: "100vh",
-      }}
-    >
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div>
-    
-          <div>
-            <PostComponent />
-          </div>
-          <br />
-          <div>
-            <PostComponent />
-          </div>
-          <br />
-          <div>
-            <PostComponent />
-          </div>
-        </div>
-      </div>
+    <div>
+      <ToggleMessage />
+      <ToggleMessage />
+      <ToggleMessage />
     </div>
   );
 }
+
+
+const ToggleMessage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setIsVisible(!isVisible)}>Toggle Message</button>
+      {isVisible && <p>This message is conditionally rendered!</p>}
+      {!isVisible && <p>This message is not conditionally rendered!</p>}
+    </div>
+  );
+};
+
+
+
+
+
+
+
 
 const style = {
   width: 200,
@@ -68,5 +70,6 @@ function PostComponent() {
     </div>
   );
 }
+
 
 export default App;
