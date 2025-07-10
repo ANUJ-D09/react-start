@@ -12,13 +12,14 @@ function App() {
 
 
 const ToggleMessage = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(0);
+function increasec(){
+  setIsVisible(isVisible+1);
+}
   return (
     <div>
-      <button onClick={() => setIsVisible(!isVisible)}>Toggle Message</button>
-      {isVisible && <p>This message is conditionally rendered!</p>}
-      {!isVisible && <p>This message is not conditionally rendered!</p>}
+      <button onClick={increasec}>Toggle Message</button>
+      {isVisible}
     </div>
   );
 };
