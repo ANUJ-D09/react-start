@@ -8,6 +8,5 @@ const style = {
 };
 
 export function getpost({name,subtitle,description,time,image}){
-    
 
-}
+
