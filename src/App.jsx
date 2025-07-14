@@ -1,11 +1,16 @@
 import { useState } from "react";
-
+import { PostComponent } from "./assets/post";
 function App() {
   return (
     <div>
-      <ToggleMessage />
-      <ToggleMessage />
-      <ToggleMessage />
+      <ToggleCounter />
+      <PostComponent
+        name="John Doe"
+        subtitle="Software Developer"
+        time="2 hours ago"
+        image="https://example.com/avatar.jpg"
+        description="This is a sample post description showing how the component works."
+      />
     </div>
   );
 }
@@ -42,35 +47,7 @@ const style = {
   gap: 8, // Added gap between child elements
 };
 
-function PostComponent() {
-  return (
-    <div style={style}>
-      <div
-        style={{
-          display: "flex",
-         
-          gap: 8,
-          fontSize: 10,
-        }}
-      >
-        <img
-          src="/Snip20250707_36.png"
-          alt="Dog" 
-          style={{
-            width: 40,
-            height: 40,
-            margin:10,
-            padding:10,
-            borderRadius: "50%", 
-            objectFit: "cover", 
-          }}
-        />
-        <b>I am best dog</b>
-      </div>
-      <div style={{ fontSize: 12 }}>100k for me</div>
-    </div>
-  );
-}
+
 
 
 export default App;
