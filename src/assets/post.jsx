@@ -26,10 +26,9 @@ export function PostComponent({ name, subtitle, time, image, description }) {
             <div style={{ display: "flex" }}>
               <div>{time}</div>
               <img
-                src={
-                  "https://media.istockphoto.com/id/931336618/vector/clock-vector-icon-isolated.jpg?s=612x612&w=0&k=20&c=I8EBJl8i6olqcrhAtKko74ydFEVbfCQ6s5Pbsx6vfas="
-                }
+                src="/Snip20250707_36.png"
                 style={{ width: 12, height: 12 }}
+                alt="icon"
               />
             </div>
           ) : null}

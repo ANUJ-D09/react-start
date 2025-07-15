@@ -1,53 +1,41 @@
 import { useState } from "react";
 import { PostComponent } from "./assets/post";
+
 function App() {
+  const [posts, setPosts] = useState([]);
+
+  const postComponents = posts.map((post) => (
+    <PostComponent
+      name={post.name}
+      subtitle={post.subtitle}
+      time={post.title}
+      image={post.image}
+      description={post.description}
+    />
+  ));
+
+  function addPost() {
+    setPosts([
+      ...posts,
+      {
+        name: "anuj",
+        subtitle: "10000 followers",
+        time: "2m ago",
+        image: "Snip20250707_36.png",
+        description:
+          "What to know how to win big? Check out how these folks won $6000 in bounties.",
+      },
+    ]);
+  }
+
   return (
-    <div>
-      <ToggleCounter />
-      <PostComponent
-        name="John Doe"
-        subtitle="Software Developer"
-        time="2 hours ago"
-        image="https://example.com/avatar.jpg"
-        description="This is a sample post description showing how the component works."
-      />
+    <div style={{ background: "#dfe6e9", height: "100vh" }}>
+      <button onClick={addPost}>Add post</button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div>{postComponents}</div>
+      </div>
     </div>
   );
 }
-
-
-const ToggleMessage = () => {
-  const [isVisible, setIsVisible] = useState(0);
-function increasec(){
-  setIsVisible(isVisible+1);
-}
-  return (
-    <div>
-      <button onClick={increasec}>Toggle Message</button>
-      {isVisible}
-    </div>
-  );
-};
-
-
-
-
-
-
-
-
-const style = {
-  width: 200,
-  backgroundColor: "white",
-  borderRadius: 10,
-  border: "1px solid grey",
-  display: "flex",
-
-  padding: 10, // Added padding for better spacing
-  gap: 8, // Added gap between child elements
-};
-
-
-
 
 export default App;
