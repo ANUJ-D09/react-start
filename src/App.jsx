@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PostComponent } from "./assets/post";
+import {Counter} from "./assets/notification";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -34,6 +35,7 @@ function App() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div>{postComponents}</div>
       </div>
+      <Counter/>
     </div>
   );
 }
